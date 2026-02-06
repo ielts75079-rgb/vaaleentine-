@@ -2,27 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Lamia ❤️</title>
+  <title>Happy Rose Day 🌹</title>
 
   <style>
     body {
       margin: 0;
       height: 100vh;
-      background: linear-gradient(to bottom, #ffe6ee, #ffd6e8);
-      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #fff1f5, #ffd6de);
+      font-family: Georgia, "Times New Roman", serif;
       text-align: center;
       overflow: hidden;
     }
 
-    .box {
+    .container {
       position: relative;
       top: 25%;
       transform: translateY(-25%);
     }
 
     h1 {
-      color: #ff2f6d;
-      font-size: 38px;
+      color: #c9184a;
+      font-size: 42px;
       margin-bottom: 10px;
     }
 
@@ -30,8 +30,8 @@
       font-size: 18px;
       color: #444;
       width: 80%;
-      margin: 10px auto;
-      line-height: 1.6;
+      margin: 12px auto;
+      line-height: 1.7;
     }
 
     .photo img {
@@ -39,87 +39,62 @@
       height: 220px;
       object-fit: cover;
       border-radius: 50%;
-      border: 4px solid #ff2f6d;
+      border: 4px solid #c9184a;
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
       margin: 20px 0;
     }
 
-    button {
-      margin: 20px;
-      padding: 14px 34px;
-      font-size: 18px;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-    }
-
-    #yes {
-      background: #ff2f6d;
-      color: white;
-    }
-
-    #no {
-      background: #ddd;
-      position: absolute;
-    }
-
-    .heart {
+    .rose {
       position: fixed;
-      color: #ff2f6d;
-      font-size: 20px;
-      animation: float 6s linear infinite;
+      font-size: 22px;
+      animation: fall 7s linear infinite;
     }
 
-    @keyframes float {
-      from { bottom: -10px; opacity: 1; }
-      to { bottom: 110%; opacity: 0; }
+    @keyframes fall {
+      from {
+        top: -10%;
+        opacity: 1;
+      }
+      to {
+        top: 110%;
+        opacity: 0;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<audio autoplay loop>
-  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
-</audio>
-
-<div class="box">
-  <h1>Lamia 💖</h1>
+<div class="container">
+  <h1>Lamia 🌹</h1>
 
   <div class="photo">
     <img src="lamia.jpg" alt="Lamia">
   </div>
 
   <p>
-    From the moment you came into my life, everything felt calmer and warmer.
-    I don’t promise perfection, but I promise honesty, loyalty, and effort.
+    This rose is not just a flower,
+    it’s a symbol of how special you are to me.
+    Simple, honest, and meant only for you.
   </p>
 
-  <p>Will you be my Valentine? 💘</p>
-
-  <button id="yes" onclick="yesClick()">Yes 💕</button>
-  <button id="no" onmouseover="moveNo()">No 🙈</button>
+  <p>
+    Happy Rose Day ❤️
+  </p>
 </div>
 
 <script>
-  function yesClick() {
-    alert("You just made me the happiest person alive ❤️");
-  }
-
-  function moveNo() {
-    const no = document.getElementById("no");
-    no.style.left = Math.random() * 80 + "vw";
-    no.style.top = Math.random() * 80 + "vh";
-  }
-
   setInterval(() => {
-    const heart = document.createElement("div");
-    heart.className = "heart";
-    heart.innerHTML = "❤️";
-    heart.style.left = Math.random() * 100 + "vw";
-    document.body.appendChild(heart);
-    setTimeout(() => heart.remove(), 6000);
-  }, 500);
+    const rose = document.createElement("div");
+    rose.className = "rose";
+    rose.innerHTML = "🌹";
+    rose.style.left = Math.random() * 100 + "vw";
+    document.body.appendChild(rose);
+
+    setTimeout(() => {
+      rose.remove();
+    }, 7000);
+  }, 600);
 </script>
 
 </body>
